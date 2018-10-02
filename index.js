@@ -51,7 +51,9 @@ class Die {
         });
         this.diceBox.addEventListener('dblclick', () => {
             container.removeChild(this.diceBox);
-            container.removeChild(dice[]);
+            let removeArrItem = dice.indexOf(this.diceBox);
+            dice.splice(removeArrItem, 1);
+            console.log(dice);
         });
         
     };
@@ -59,7 +61,6 @@ class Die {
     roll() {
         this.value = Math.ceil( Math.random() * 6 );
         this.diceBox.innerText = this.value;
-        console.log(this.diceBox.innerHTML, this.diceBox.innerText);
     };
 };
 
