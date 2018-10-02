@@ -10,8 +10,7 @@ container.id = 'container';
 let button = document.getElementById('btn');
 let rollButton = document.getElementById('rollBtn');
 let sumButton = document.getElementById('sumButton');
-let sum = 0;
-let die;
+let sum;
 
 button.addEventListener('click', () => {
     dice.push(new Die());
@@ -63,7 +62,3 @@ class Die {
         this.diceBox.innerText = this.value;
     };
 };
-
-
-// indexOf
-// to remove array
